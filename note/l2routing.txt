@@ -1,0 +1,75 @@
+=> Route 
+    routes > web.php (or) routes > api.php 
+
+
+=>Avaliable Router Methods
+    Route::get(uri,callback); 
+    Route::post(uri,callback);
+    Route::put(uri,callback);
+    Route::patch(uri,callback);
+    Route::delete(uri,callback);
+    Route::options(uri,callback);
+
+
+=> Basic Routing 
+    Route::get("/",function(){
+        return view("filename");
+    });
+
+    Route::get("/",function(){
+        return "Save Myanmar";
+    });
+
+    Route::get("/sayar",function(){
+        return "Hay, Sayar Nay Kaung Lar???;
+    });
+
+Note:: it's ok without / 
+    Route::get("sayar",function(){
+        return "Hay, Sayar Nay Kaung Lar???;
+    });
+
+
+    Route::get("/about",function(){
+        return view("aboutme");
+    });
+
+
+(or)
+
+    Route::view("about","aboutme");
+
+
+    Route::get("/about/aboutcompany",function(){
+        return view("aboutcompany");
+    });
+
+(or)
+
+    Syntax : 
+        Route::view(uri,filename);
+
+    Route::view("/about/company","aboutcompany");
+
+-----------------------------------------------------------
+
+=> Redirect Routing 
+    Syntax : 
+        Route::get(uri,function(){
+            return redirect(routename);
+        });
+
+
+        Route::get("/contact",function(){
+            return redirect("about");
+        });
+
+
+    (or)
+
+        Syntax :
+            Route::redirect(uri,routename)
+
+        Route::redirect("contact","about/aboutcompany");
+
+-----------------------------------------------------------
