@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\employeesController;
 use App\Http\Controllers\studentsController;
+use App\Http\Controllers\staffsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -70,3 +72,12 @@ use App\Http\Controllers\studentsController;
         Route::get("/students/show",[studentsController::class,"show"])->name('show');
         Route::get("/students/edit",[studentsController::class,"edit"])->name('edit');
     });
+
+    Route::get('/staffs',[staffsController::class,'home'])->name('staffs.home');
+    Route::get('/staffsparty',[staffsController::class,'party'])->name('staffs.party');
+    Route::get('/staffsparty/{total}',[staffsController::class,'partytotal'])->name('staffs.partytotal');
+    Route::get('/staffsparty/{stotal}/{status}',[staffsController::class,'partytotalconfirm'])->name('staffs.status');
+
+
+    Route::get('employees',[employeesController::class,'index'])->name('employees.index');
+    Route::get('/employees/show',[employeesController::class,'index'])->name('employees.show');
