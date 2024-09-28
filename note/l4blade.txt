@@ -3,3 +3,10 @@
 filename.blade.php
 
 php artisasn make:controller employeesController
+
+=> Passing Data From Route / Controller 
+    (i) view(view,variable) 
+        or 
+        view(view,['string'=>variable,'string'=>variable]);
+    (ii) with("arraystring",variable);
+    (iii) compact(arraystring)

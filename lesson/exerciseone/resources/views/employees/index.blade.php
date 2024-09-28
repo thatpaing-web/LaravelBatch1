@@ -22,8 +22,23 @@
         <ul>
             @foreach($employeedata as $key=>$value)
                 <li>{!! $key ." = ". $value . "<br/>" !!}</li>
-            @endforeach;
+            @endforeach
         </ul>
+        
+
+        @php 
+            $city = "Yangon";
+        @endphp 
+
+        @php 
+            echo $city
+        @endphp
+
+        @if($city === "Yangon")
+            <h3>You Correct!</h3>
+        @else
+            <h3>You were wrong ! Try again</h3>
+        @endif
 
     </body>
 </html>

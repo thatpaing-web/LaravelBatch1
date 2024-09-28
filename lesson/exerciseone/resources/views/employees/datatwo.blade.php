@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Employee Page</title>
+</head>
+<body>
+
+    <h1>Welcome to Our Site</h1>
+    <p>This is Employee Data Two</p>
+
+    <h3> Hi There !!! {{$greeting}} </h3>
+
+    @php 
+
+    echo "<pre>".print_r($students,true). "</pre>";
+    
+    echo $students[0] , "<br/>";
+    echo $students[1] , "<br/>";
+    echo $students[2] , "<br/>";
+
+    @endphp 
+
+    <ul>
+        @foreach($students as $value)
+            <li>{{$value}}</li>
+        @endforeach
+    </ul>
+    
+</body>
+</html>
