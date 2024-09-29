@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\employeesController;
 use App\Http\Controllers\studentsController;
 use App\Http\Controllers\staffsController;
+use App\Http\Controllers\dashboardsController;
+use App\Http\Controllers\membersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -80,8 +82,14 @@ use App\Http\Controllers\staffsController;
 
 
     Route::get('employees',[employeesController::class,'index'])->name('employees.index');
-    Route::get('/employees/show',[employeesController::class,'index'])->name('employees.show');
+    Route::get('/employees/show',[employeesController::class,'show'])->name('employees.show');
     Route::get('/employees/passingdataone',[employeesController::class,'passingdataone'])->name('employees.passingdataone');
     Route::get('/employees/passingdatatwo',[employeesController::class,'passingdatatwo'])->name('employees.passingdatatwo');
     Route::get('/employees/passingdatathree',[employeesController::class,'passingdatathree'])->name('employees.passingdatathree');
     Route::get('/employees/passingdatafour',[employeesController::class,'passingdatafour'])->name('employees.passingdatafour');
+    Route::get('/employees/edit',[employeesController::class,'edit'])->name('employees.edit');
+    Route::get('/employees/update',[employeesController::class,'update'])->name('employees.update');
+
+    Route::get('/dashboards',[dashboardsController::class,'index'])->name('dashboards.index');
+
+    Route::get('/members',[membersController::class,'index'])->name('members.index');

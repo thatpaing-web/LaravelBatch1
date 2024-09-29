@@ -1,0 +1,28 @@
+=> yield()
+
+    php artisan make:controller dashboardsController
+
+    use App\Http\Controllers\dashboardsController;
+    use App\Http\Controllers\membersController;
+
+
+    Route::get('/dashboards',[dashboardsController::class,'index'])->name('dashboards.index');
+
+    Route::get('/members',[membersController::class,'index'])->name('members.index');
+
+    @extends('layouts.layout') 
+
+    @yiele('title')
+
+-> For Single Line
+    @section('title',"Index Page")
+
+
+-> For Multi Line
+    @section('heading')
+        My First Member Template
+    @endsection
+
+    @section('heading')
+        My First Member Template
+    @stop
