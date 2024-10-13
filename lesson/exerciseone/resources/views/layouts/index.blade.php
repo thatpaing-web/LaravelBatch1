@@ -12,7 +12,11 @@
     </div>
 @endsection
 
-
+{{--
 @section('footer')
     Thanks for using our platform.
 @endsection
+--}}
+@section('footer')
+    Copyright {{$getyear}} . Design by ABC Co.,Ltd.
+@stop 

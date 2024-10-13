@@ -19,6 +19,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
-    }
+        view()->composer('*',function($view){
+            $getyear = date('Y');
+            $view->with('getyear',$getyear);
+        });
+       }
 }
